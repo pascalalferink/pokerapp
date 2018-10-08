@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///D:/projecten/innovatie/poker/PWA%20Splash%20Screen.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="manifest" href="manifest.json">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+	<meta name="apple-mobile-web-app-title" content="PWA Splash">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-1536x2048.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+	<link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#6F6F6F">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
+	<title>PWA Splash Screen</title>
+
+	<style>
+	html {
+		font-family: 'lato', sans-serif;
+		counter: i;
+	}
+	.dnz-poker-tiles {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	label {
+		height: 20vh;
+		line-height: 20vh;
+		flex: 1 0  33.3%;
+		counter-increment: i;
+	}
+	label:before {
+		content: attr(data-text);
+		display: block;
+		font-size: 40px;
+		border: 10px solid #fff;
+		height: 100%;
+		text-align: center;
+		border-style: double;
+		box-sizing: border-box;
+		background-color: rgba(255,0,0,1 );
+		border-radius: 10px;
+
+
+	}
+	label input {
+		display: none;
+	}
+
+	label input + span {
+		content: attr(data-text);
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+		line-height: 100vh;
+		font-size: 70vw;
+		text-align: center;
+		background: crimson;
+		border: 10px solid #fff;
+		border-radius: 20px;
+		border-style: double;
+		box-sizing: border-box;
+
+		opacity: 0;
+		pointer-events: none;
+		transform: scale(.1);
+		transition: all .3s;
+	}
+
+	label input[type="checkbox"]:checked + span {
+		opacity: 1;
+		pointer-events: auto;
+		transform: scale(1);
+
+	}
+
+	@for $i from 1 through 12 { 
+	  label:nth-child(#{$i}) {
+	    background: hsl($i * 10, 50%, 50%);
+	  }
+	}
+
+	
+	</style>
+</head>
+
+<body>
+	<noscript>
+		You need to enable JavaScript to run this app.
+	</noscript>
+	 <div class="dnz-poker">
+		<div class="dnz-poker-tiles">
+				<label for="card-0" data-text="0">
+					<input type="checkbox" name="card" id="card-0" value="0">
+					<span>0</span>
+				</label>
+				<label for="card-1" data-text="1">
+					<input type="checkbox" name="card" id="card-1" value="1">
+					<span>1</span>
+				</label>
+				<label for="card-2" data-text="2">
+					<input type="checkbox" name="card" id="card-2" value="2">
+					<span>2</span>
+				</label>
+				<label for="card-3" data-text="3">
+					<input type="checkbox" name="card" id="card-3" value="3">
+					<span>3</span>
+				</label>
+				<label for="card-5" data-text="5">
+					<input type="checkbox" name="card" id="card-5" value="5">
+					<span>5</span>
+				</label>
+				<label for="card-8" data-text="8">
+					<input type="checkbox" name="card" id="card-8" value="8">
+					<span>8</span>
+				</label>
+				<label for="card-13" data-text="13">
+					<input type="checkbox" name="card" id="card-13" value="13">
+					<span>13</span>
+				</label>
+				<label for="card-20" data-text="20">
+					<input type="checkbox" name="card" id="card-20" value="20">
+					<span>20</span>
+				</label>
+				<label for="card-40" data-text="40">
+					<input type="checkbox" name="card" id="card-40" value="40">
+					<span>40</span>
+				</label>
+				<label for="card-?" data-text="?" title="unknown">
+					<input type="checkbox" name="card" id="card-?" value="?">
+					<span>?</span>
+				</label>
+				<label for="card-∞" data-text="∞" title="infinity">
+					<input type="checkbox" name="card" id="card-∞" value="∞">
+					<span>∞</span>
+				</label>
+				<label for="card-☕" data-text="☕" title="coffee">
+					<input type="checkbox" name="card" id="card-☕" value="☕">
+					<span>☕</span>
+				</label>
+
+
+			</div>
+		</div>
+	</div>
+
+	<script src="app.js"></script>
+
+
+</body></html>

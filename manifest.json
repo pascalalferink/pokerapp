@@ -1,0 +1,18 @@
+{
+  "name": "Poker app",
+  "short_name": "Poker app",
+  "description": "Poker app",
+  "display": "standalone",
+  "scope": ".",
+  "start_url": "/poker/poker.html",
+  "orientation": "portrait",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/favicon-32x32.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
